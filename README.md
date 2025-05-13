@@ -1,0 +1,1 @@
+This is a Hotel Management System created using tkinter library of python and MongoDB.This application provides an intuitive interface for managing hotel operations, including customer details, adding customers, updating customer details and more.The screenshots of the Application is given below.
