@@ -1,7 +1,7 @@
 #Establishing Database Connection
 import pymongo
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-mydb = myclient["Hotel"]
-mycol = mydb["customers"]
-mycol2=mydb["vacated_customers"]
+myclient = pymongo.MongoClient("YourPortName")
+mydb = myclient["YourDatabaseName"]
+mycol = mydb["YourFirstCollectionName"]
+mycol2=mydb["YourSecondCollectionName"]
