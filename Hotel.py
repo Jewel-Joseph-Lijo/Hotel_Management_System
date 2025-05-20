@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk,messagebox
-from database import mycol,mycol2
+from Database import mycol,mycol2
 from prettytable import PrettyTable
 import datetime
 
@@ -61,8 +61,9 @@ def check_out():
                     if i in "-0123456789":
                         date+=i
                 del data['_id']
+                del data['Checked_in']
+                data.update({"Check_out_date":date})
                 mycol2.insert_one(data)
-                mycol2.update_one({"Room_number":room_number},{"$set":{"Check_out_date":date}})
                 mycol.delete_one({"Room_number":room_number})
                 messagebox.showinfo("Success","Customer checked-out successfully")
             else:
